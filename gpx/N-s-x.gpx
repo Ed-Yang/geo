@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx>
+	<wpt lat="24.8492134" lon="120.92775"> <ele>7.0</ele> <time>2010-01-01T00:00:00Z</time></wpt>
+	<wpt lat="24.8492426" lon="120.928029"> <ele>8.0</ele> <time>2010-01-01T00:00:10Z</time></wpt>
+	<wpt lat="24.8492475" lon="120.928302"> <ele>6.0</ele> <time>2010-01-01T00:00:20Z</time></wpt>
+	<wpt lat="24.8491063" lon="120.928409"> <ele>6.0</ele> <time>2010-01-01T00:00:26Z</time></wpt>
+	<wpt lat="24.8491939" lon="120.928587"> <ele>5.0</ele> <time>2010-01-01T00:00:34Z</time></wpt>
+	<wpt lat="24.8492913" lon="120.928715"> <ele>5.0</ele> <time>2010-01-01T00:00:40Z</time></wpt>
+	<wpt lat="24.8494227" lon="120.92871"> <ele>4.0</ele> <time>2010-01-01T00:00:45Z</time></wpt>
+	<wpt lat="24.8496125" lon="120.928694"> <ele>3.0</ele> <time>2010-01-01T00:00:53Z</time></wpt>
+	<wpt lat="24.8497537" lon="120.928839"> <ele>3.0</ele> <time>2010-01-01T00:01:01Z</time></wpt>
+	<wpt lat="24.8494568" lon="120.928898"> <ele>3.0</ele> <time>2010-01-01T00:01:13Z</time></wpt>
+	<wpt lat="24.8491793" lon="120.929021"> <ele>4.0</ele> <time>2010-01-01T00:01:25Z</time></wpt>
+	<wpt lat="24.8489262" lon="120.929139"> <ele>5.0</ele> <time>2010-01-01T00:01:36Z</time></wpt>
+	<wpt lat="24.8487363" lon="120.929214"> <ele>4.0</ele> <time>2010-01-01T00:01:44Z</time></wpt>
+	<wpt lat="24.8485903" lon="120.929273"> <ele>3.0</ele> <time>2010-01-01T00:01:50Z</time></wpt>
+	<wpt lat="24.8484297" lon="120.929332"> <ele>4.0</ele> <time>2010-01-01T00:01:57Z</time></wpt>
+	<wpt lat="24.8483664" lon="120.929112"> <ele>5.0</ele> <time>2010-01-01T00:02:05Z</time></wpt>
+	<wpt lat="24.8482982" lon="120.928903"> <ele>7.0</ele> <time>2010-01-01T00:02:13Z</time></wpt>
+	<wpt lat="24.8481522" lon="120.928694"> <ele>8.0</ele> <time>2010-01-01T00:02:23Z</time></wpt>
+	<wpt lat="24.8479088" lon="120.928731"> <ele>8.0</ele> <time>2010-01-01T00:02:33Z</time></wpt>
+	<wpt lat="24.8480743" lon="120.928619"> <ele>8.0</ele> <time>2010-01-01T00:02:40Z</time></wpt>
+	<wpt lat="24.848196" lon="120.928377"> <ele>8.0</ele> <time>2010-01-01T00:02:50Z</time></wpt>
+	<wpt lat="24.8482398" lon="120.928216"> <ele>8.0</ele> <time>2010-01-01T00:02:56Z</time></wpt>
+	<wpt lat="24.8482398" lon="120.928093"> <ele>8.0</ele> <time>2010-01-01T00:03:01Z</time></wpt>
+	<wpt lat="24.8482155" lon="120.927916"> <ele>9.0</ele> <time>2010-01-01T00:03:07Z</time></wpt>
+	<wpt lat="24.8482155" lon="120.927793"> <ele>9.0</ele> <time>2010-01-01T00:03:12Z</time></wpt>
+	<wpt lat="24.8483323" lon="120.92768"> <ele>9.0</ele> <time>2010-01-01T00:03:18Z</time></wpt>
+	<wpt lat="24.8484248" lon="120.927707"> <ele>8.0</ele> <time>2010-01-01T00:03:22Z</time></wpt>
+	<wpt lat="24.8485124" lon="120.927809"> <ele>9.0</ele> <time>2010-01-01T00:03:27Z</time></wpt>
+	<wpt lat="24.8486682" lon="120.927948"> <ele>9.0</ele> <time>2010-01-01T00:03:35Z</time></wpt>
+	<wpt lat="24.8487363" lon="120.927975"> <ele>9.0</ele> <time>2010-01-01T00:03:38Z</time></wpt>
+	<wpt lat="24.8486925" lon="120.927846"> <ele>8.0</ele> <time>2010-01-01T00:03:43Z</time></wpt>
+	<wpt lat="24.8486925" lon="120.927669"> <ele>8.0</ele> <time>2010-01-01T00:03:49Z</time></wpt>
+	<wpt lat="24.8489262" lon="120.927428"> <ele>7.0</ele> <time>2010-01-01T00:04:02Z</time></wpt>
+	<wpt lat="24.8489992" lon="120.927439"> <ele>7.0</ele> <time>2010-01-01T00:04:05Z</time></wpt>
+	<wpt lat="24.8492134" lon="120.927551"> <ele>6.0</ele> <time>2010-01-01T00:04:15Z</time></wpt>
+	<wpt lat="24.8494081" lon="120.927626"> <ele>5.0</ele> <time>2010-01-01T00:04:23Z</time></wpt>
+	<wpt lat="24.8495639" lon="120.927664"> <ele>3.0</ele> <time>2010-01-01T00:04:29Z</time></wpt>
+	<wpt lat="24.8495931" lon="120.927841"> <ele>3.0</ele> <time>2010-01-01T00:04:36Z</time></wpt>
+	<wpt lat="24.8495395" lon="120.928152"> <ele>4.0</ele> <time>2010-01-01T00:04:47Z</time></wpt>
+	<wpt lat="24.8494811" lon="120.928318"> <ele>4.0</ele> <time>2010-01-01T00:04:54Z</time></wpt>
+	<wpt lat="24.849374" lon="120.928458"> <ele>5.0</ele> <time>2010-01-01T00:05:00Z</time></wpt>
+	<wpt lat="24.8492669" lon="120.928474"> <ele>5.0</ele> <time>2010-01-01T00:05:05Z</time></wpt>
+</gpx>
