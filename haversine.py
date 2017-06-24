@@ -40,21 +40,21 @@ if __name__ == "__main__":
     # Examples from Jan Matuschek's article
 
     def test(lat, lon, dist):
-        print "test bounding box", lat, lon, dist
+        print ("test bounding box", lat, lon, dist)
         dlat, dlon = bounding_box(lat, lon, dist)
-        print "dlat, dlon degrees", dlat, dlon
-        print "lat min/max rads", map(radians, (lat - dlat, lat + dlat))
-        print "lon min/max rads", map(radians, (lon - dlon, lon + dlon))
+        print ("dlat, dlon degrees", dlat, dlon)
+        print ("lat min/max rads", map(radians, (lat - dlat, lat + dlat)))
+        print ("lon min/max rads", map(radians, (lon - dlon, lon + dlon)))
 
-    print "liberty to eiffel"
-    print distance_between_points(40.6892, -74.0444, 48.8583, 2.2945) # about 5837 km
-    print
-    print "calc min/max lat/lon"
+    print ("liberty to eiffel")
+    print (distance_between_points(40.6892, -74.0444, 48.8583, 2.2945)) # about 5837 km
+    print ()
+    print ("calc min/max lat/lon")
     degs = map(degrees, (1.3963, -0.6981))
     test(*degs, dist=1000)
     print
     degs = map(degrees, (1.3963, -0.6981, 1.4618, -1.6021))
-    print degs, "distance", distance_between_points(*degs) # 872 km
+    print (degs, "distance", distance_between_points(*degs)) # 872 km
 
 
     

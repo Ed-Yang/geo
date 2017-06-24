@@ -1,4 +1,4 @@
 #!/bin/bash
 
-python gcircle.py -d 5 -o ./gpx/f.gpx $@
+python3 gcircle.py -d 5 -o ./gpx/f.gpx $@
 

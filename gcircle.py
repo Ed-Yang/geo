@@ -36,8 +36,8 @@ def gen_wpt(secs,  lat, lon, r=1):
         lat1 = I + (F - M) + 2 * M * P 
         I, F = modf(lon)
         lon1 = I + (F - M) + 2 * M * P 
-        print '({}, {}) --> ({}, {}'.format(lat, lon, lat1, lon1)
-        print 'distance between (m): ', 1000 * distance_between_points(lat, lon, lat1, lon1)
+        print ('({}, {}) --> ({}, {}'.format(lat, lon, lat1, lon1))
+        print ('distance between (m): ', 1000 * distance_between_points(lat, lon, lat1, lon1))
         lat = lat1
         lon = lon1
 
@@ -58,12 +58,12 @@ def gen_gpx(ofilename, lat_str, lon_str):
     lat_min, lat_max = (lat - dlat, lat + dlat)
     lon_min, lon_max = (lon - dlon, lon + dlon)
 
-    print lat_min, lat_max, dlat
-    print lon_min, lon_max
+    print (lat_min, lat_max, dlat)
+    print (lon_min, lon_max)
 
-    print 'Latitude (min/max): ', lat_min, lat_max
-    print 'Longitude(min/max): ', lon_min, lon_max
-    print 'Output file: {}'.format(ofilename)    
+    print ('Latitude (min/max): ', lat_min, lat_max)
+    print ('Longitude(min/max): ', lon_min, lon_max)
+    print ('Output file: {}'.format(ofilename)    )
 
     sp = SPEED * 1000 / 24 * 60
     s = DIST * 1000 * 2 / SPEED
@@ -87,38 +87,40 @@ def gen_gpx(ofilename, lat_str, lon_str):
     
 
 
-usage_str = 'Usage: gcircle.py -o <outputfile> lat, lon'
+usage_str = 'Usage: gcircle.py [-d <distance>] -o <outputfile> lat, lon'
 
 def main(argv):
     
     outputfile = ''
     
     try:
-        opts, args = getopt.getopt(argv, "ho:", ["ofile="])
+        opts, args = getopt.getopt(argv, "ho:d:", ["ofile=", "distance="])
     except getopt.GetoptError:
-        print usage_str
+        print (usage_str)
         sys.exit(2)
 
     for opt, arg in opts:
         if opt == '-h':
-            print usage_str
+            print (usage_str)
             sys.exit()
         elif opt in ("-o", "--ofile"):
             outputfile = arg
+        elif opt in ("-d", "--distance"):
+            DIST = float(arg)/1000.0
 
     if not outputfile:
-        print 'output is not specified !'
-        print usage_str
+        print ('output is not specified !')
+        print (usage_str)
         sys.exit()
 
     try:
-        print args
+        print (args)
         lat_str, lon_str = args
         # remove tailing comma
         if lat_str.endswith(","): lat_str = lat_str[:-1]
     except ValueError:
-        print 'position is not correctly specified !'
-        print usage_str
+        print ('position is not correctly specified !')
+        print (usage_str)
         sys.exit(2)
 
     gen_gpx(outputfile, lat_str, lon_str)

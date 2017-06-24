@@ -1,0 +1,4 @@
+#!/bin/bash
+
+python gcircle.py -o ./gpx/t.gpx $@
+
