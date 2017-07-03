@@ -1,0 +1,3 @@
+#!/bin/bash
+python3 gcross.py -s 1 -d 20 -o ./gym/c.gpx $@
+
