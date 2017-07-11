@@ -23,6 +23,7 @@ M = 0.00000003
 gpx_file_header = '<?xml version="1.0" encoding="UTF-8"?>'
 gpx_header = '<gpx>'
 gpx_footer = '</gpx>'
+gpx_desc = '<desc> {}, {} </desc>'
 
 wpt_str = "<wpt lat=\"{}\" lon=\"{}\"> <time>{} </time></wpt>"
 time_str = "2010-01-01T00:{}:{}Z"
@@ -49,7 +50,7 @@ def gen_wpt(name, secs,  lat, lon, r=1):
         #print ('new position offste (m): ', 1000 * distance_between_points(lat, lon, lat1, lon1))
         lat = lat1
         lon = lon1
-        print (name, '({}, {}) {} seconds'.format(lat, lon, secs))
+        #print (name, '({}, {}) {} seconds'.format(lat, lon, secs))
 
     return wpt_str.format(lat, lon, ts) 
 
@@ -58,6 +59,7 @@ def gen_gpx(ofilename, lat_str, lon_str):
     gpx_out = open(ofilename, 'w')
     gpx_out.write(gpx_file_header + '\n')
     gpx_out.write(gpx_header + '\n')
+    gpx_out.write(gpx_desc.format(lat_str, lon_str) + '\n')
 
     lat, lon = map(float, (lat_str, lon_str))
     dlat, dlon = bounding_box(lat, lon, DIST)
@@ -68,17 +70,18 @@ def gen_gpx(ofilename, lat_str, lon_str):
     lat_min, lat_max = (lat - dlat, lat + dlat)
     lon_min, lon_max = (lon - dlon, lon + dlon)
 
-    print (lat_min, lat_max, dlat)
-    print (lon_min, lon_max)
+    #print (lat_min, lat_max, dlat)
+    #print (lon_min, lon_max)
 
-    print ('Latitude (min/max): ', lat_min, lat_max)
-    print ('Longitude(min/max): ', lon_min, lon_max)
-    print ('Output file: {}'.format(ofilename)    )
+    #print ('Latitude (min/max): ', lat_min, lat_max)
+    #print ('Longitude(min/max): ', lon_min, lon_max)
+    
 
     sp = SPEED * 1000 / 24 * 60
     s = DIST * 1000 * 2 / SPEED
     s1 = sqrt(2 * s * s)
-    print("s = ", s, "s1 = ", s1)
+    print("radius = ", DIST * 1000, "speed = ", SPEED, "diameter = ", s, "cross = ", s1)
+    print ('output file: {}'.format(ofilename)    )
 
     t = 0
     # s0: 0, 0 
@@ -109,6 +112,8 @@ usage_str = 'Usage: gcross.py [-s <speed>]  [-d <distance>] -o <outputfile> lat,
 
 def main(argv):
     
+    global DIST, SPEED
+
     outputfile = ''
     
     try:
@@ -125,10 +130,10 @@ def main(argv):
             outputfile = arg
         elif opt in ("-d", "--distance"):
             DIST = float(arg)/1000.0
-            print("Radius is %f km" % DIST)
+            #print("Radius is %f km" % DIST)
         elif opt in ("-s", "--speed"):
             SPEED = float(arg)
-            print("Speed is %f km/hour" % SPEED)
+            #print("Speed is %f km/hour" % SPEED)
         
     if not outputfile:
         print ('output is not specified !')

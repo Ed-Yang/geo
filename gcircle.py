@@ -14,6 +14,7 @@ M = 0.00000003
 gpx_file_header = '<?xml version="1.0" encoding="UTF-8"?>'
 gpx_header = '<gpx>'
 gpx_footer = '</gpx>'
+gpx_desc = '<desc> {}, {} </desc>'
 
 wpt_str = "<wpt lat=\"{}\" lon=\"{}\"> <time>{} </time></wpt>"
 time_str = "2010-01-01T00:{}:{}Z"
@@ -36,8 +37,8 @@ def gen_wpt(secs,  lat, lon, r=1):
         lat1 = I + (F - M) + 2 * M * P 
         I, F = modf(lon)
         lon1 = I + (F - M) + 2 * M * P 
-        print ('({}, {}) --> ({}, {}'.format(lat, lon, lat1, lon1))
-        print ('distance between (m): ', 1000 * distance_between_points(lat, lon, lat1, lon1))
+        #print ('({}, {}) --> ({}, {}'.format(lat, lon, lat1, lon1))
+        #print ('distance between (m): ', 1000 * distance_between_points(lat, lon, lat1, lon1))
         lat = lat1
         lon = lon1
 
@@ -48,6 +49,7 @@ def gen_gpx(ofilename, lat_str, lon_str):
     gpx_out = open(ofilename, 'w')
     gpx_out.write(gpx_file_header + '\n')
     gpx_out.write(gpx_header + '\n')
+    gpx_out.write(gpx_desc.format(lat_str, lon_str) + '\n')
 
     lat, lon = map(float, (lat_str, lon_str))
     dlat, dlon = bounding_box(lat, lon, DIST)
@@ -91,6 +93,8 @@ usage_str = 'Usage: gcircle.py [-d <distance>] -o <outputfile> lat, lon'
 
 def main(argv):
     
+    global DIST, SPEED
+
     outputfile = ''
     
     try:
